@@ -57,10 +57,10 @@ contract OptimizedStorageStructure
                 mstore(0, user)
                 mstore(32, balances.slot)
                 let slot := keccak256(0, 64)
-                
+    
                 // Load current balance từ storage
                 let currentBalance := sload(slot)
-                
+
                 if iszero(eq(currentBalance, newAmount)) {
                     sstore(slot, newAmount)
                     mstore(0, newAmount)

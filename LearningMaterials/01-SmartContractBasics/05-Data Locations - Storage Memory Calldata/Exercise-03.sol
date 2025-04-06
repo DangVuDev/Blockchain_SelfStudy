@@ -19,6 +19,6 @@ contract Comparison
 {
     function compareStrings(string calldata str1, string calldata str2) external pure returns (bool)
     {
-        return keccak256(abi.encodePacked(str1)) ==keccak256(abi.encodePacked(str2))
+        return keccak256(abi.encodePacked(str1)) ==keccak256(abi.encodePacked(str2));
     }
 }
